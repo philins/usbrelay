@@ -17,6 +17,6 @@ currDate = datetime.now(tz)
 
 s = sun(city.observer, date=todaysDate, tzinfo=city.timezone)
 if s['sunrise'] + timedelta(hours = 1) < currDate < s['sunset'] - timedelta(hours = 1):
-    obj_retorno = subprocess.run(["CommandApp_USBRelay.exe", "BITFT", "close", "02"],stdout=subprocess.PIPE , stderr=subprocess.PIPE)
+    subprocess.run(["CommandApp_USBRelay.exe", "BITFT", "close", "02"])
 else:
-    obj_retorno = subprocess.run(["CommandApp_USBRelay.exe", "BITFT", "open", "02"],stdout=subprocess.PIPE , stderr=subprocess.PIPE)
+    subprocess.run(["CommandApp_USBRelay.exe", "BITFT", "open", "02"])
