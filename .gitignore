@@ -1,2 +1,3 @@
 CommandApp_USBRelay.exe
 usb_relay_device.dll
+*.log
